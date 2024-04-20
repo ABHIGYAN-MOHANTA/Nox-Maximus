@@ -4,12 +4,11 @@ import styles from "./styles";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import { useState } from "react";
+import Matrix from "./src/components/Matrix";
 
-// Load custom font
 const fetchFonts = () => {
   return Font.loadAsync({
     Megloria: require("./fonts/MEGLORIA.ttf"),
-    Zapfino: require("./fonts/Zapfino.ttf"),
   });
 };
 
@@ -36,9 +35,7 @@ const App: React.FC = () => {
       </View>
 
       <View style={styles.subcontainer}>
-        <Text style={styles.text}>
-          Open up App.tsx to start working on your app!
-        </Text>
+        <Matrix />
       </View>
     </View>
   );
