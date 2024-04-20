@@ -68,7 +68,100 @@ const styles = StyleSheet.create({
     fontFamily: "Megloria",
     paddingVertical: 2,
     textAlign: "center",
-    color: "#000000"
+    color: "#000000",
+  },
+  todoItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "#555",
+  },
+  todoText: {
+    flex: 1,
+    color: "#fff",
+    fontFamily: "Megloria",
+    fontSize: 18,
+  },
+  deleteButton: {
+    marginLeft: 10,
+    padding: 5,
+    backgroundColor: "red",
+    borderRadius: 5,
+  },
+  deleteButtonText: {
+    color: "white",
+    fontFamily: "Megloria",
+  },
+  taskItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 10,
+  },
+  taskLabel: {
+    fontSize: 16,
+    color: "white",
+    marginRight: 10,
+    fontFamily: "Megloria",
+  },
+  taskStatus: {
+    fontSize: 16,
+    color: "white",
+    fontFamily: "Megloria",
+  },
+  waterCounter: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 10,
+  },
+  counterButton: {
+    paddingHorizontal: 10,
+    backgroundColor: "red",
+    borderRadius: 5,
+  },
+  counterButtonText: {
+    fontSize: 18,
+    color: "white",
+    fontFamily: "Megloria",
+  },
+  counterText: {
+    fontSize: 16,
+    color: "white",
+    marginHorizontal: 10,
+    fontFamily: "Megloria",
+  },
+  saveButton: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: "#007AFF",
+    borderRadius: 5,
+  },
+  saveButtonText: {
+    fontSize: 18,
+    color: "white",
+    fontFamily: "Megloria",
+  },
+  resetButton: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: "#FF0000",
+    borderRadius: 5,
+  },
+  resetButtonText: {
+    fontSize: 18,
+    color: "white",
+    fontFamily: "Megloria",
+  },
+  modalContainer: {
+    flex: 1,
+    backgroundColor: "#000",
+  },
+  closeButtonText: {
+    color: "#fff",
+    fontSize: 16,
+    marginBottom: 20,
+    textDecorationLine: "underline",
   },
 });
 
