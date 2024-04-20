@@ -1,35 +1,45 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View, Modal, TouchableOpacity } from "react-native";
+import { Text, View, Modal, TouchableOpacity, ActivityIndicator } from "react-native";
 import styles from "./styles";
-import AppLoading from "expo-app-loading";
-import * as Font from "expo-font";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useFonts } from "expo-font";
 import Matrix from "./src/components/Matrix";
 import HealthTracker from "./src/components/Health";
-import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome6 } from "@expo/vector-icons";
-
-const fetchFonts = () => {
-  return Font.loadAsync({
-    Megloria: require("./fonts/MEGLORIA.ttf"),
-  });
-};
+import * as SplashScreen from 'expo-splash-screen';
 
 const App: React.FC = () => {
-  const [dataLoaded, setDataLoaded] = useState(false);
   const [showHealthModal, setShowHealthModal] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      // Prevent the native splash screen from autohiding before App component renders
+      await SplashScreen.preventAutoHideAsync();
+    }
+    prepare();
+  }, []);
+
+  let [fontsLoaded] = useFonts({
+    Megloria: require("./fonts/MEGLORIA.ttf"),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      // Notify the native splash screen that loading has finished
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
   const toggleHealthModal = () => {
     setShowHealthModal(!showHealthModal);
   };
 
-  if (!dataLoaded) {
+  if (!fontsLoaded) {
     return (
-      <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setDataLoaded(true)}
-        onError={(error: any) => console.error(error)}
-      />
+      <View style={styles.container}>
+        {/* Use a loading indicator while fonts are loading */}
+        <ActivityIndicator size="large" color="black" />
+      </View>
     );
   }
 
