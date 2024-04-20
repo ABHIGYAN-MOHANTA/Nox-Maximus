@@ -53,9 +53,9 @@ const App: React.FC = () => {
           <Text style={styles.text}>~"Learn"~"Build"~"Inspire"~</Text>
           <TouchableOpacity
             onPress={toggleHealthModal}
-            style={{ position: "absolute", right: -100, top: -40 }}
+            style={{ position: "absolute", right: -100, top: -20 }}
           >
-            <FontAwesome6 name="door-open" size={24} color="white" />
+            <FontAwesome6 name="door-open" size={24} color="black" />
           </TouchableOpacity>
         </View>
       </View>
@@ -75,9 +75,9 @@ const App: React.FC = () => {
               <Text style={styles.text}>~"Learn"~"Build"~"Inspire"~</Text>
               <TouchableOpacity
                 onPress={toggleHealthModal}
-                style={{ position: "absolute", right: -100, top: -40 }}
+                style={{ position: "absolute", right: -100, top: -20 }}
               >
-                <FontAwesome6 name="door-open" size={24} color="white" />
+                <FontAwesome6 name="door-open" size={24} color="black" />
               </TouchableOpacity>
             </View>
           </View>

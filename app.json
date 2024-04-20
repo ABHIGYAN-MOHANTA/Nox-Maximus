@@ -22,7 +22,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000"
       },
-      "package": "com.thunderdome6602.Nox"
+      "package": "com.thunderdome6602.Nox",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
